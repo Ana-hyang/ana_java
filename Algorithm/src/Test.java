@@ -7,13 +7,9 @@ public class Test {
 		// 선언 및 입력받기
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
-		String str = br.readLine();
-		String arr [] = new String [3];
-		arr = str.split(" ");
-		
-		System.out.println(arr[0]);
-		System.out.println(arr[1]);
-		System.out.println(arr[2]);
+		char a = 'a';
+		String str = "h";
+		a = str.charAt(0);
+		System.out.println(a);
 	}
 }
