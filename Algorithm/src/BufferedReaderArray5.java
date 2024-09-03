@@ -22,7 +22,7 @@ public class BufferedReaderArray5 {
 		}
 
 		// 1차원 배열에 출력
-		for (int i = 0; i < 12; i++) {
+		for (int i = 0; i < str1.length() + str2.length(); i++) {
 			System.out.print(ch[i]);
 		}
 	}
