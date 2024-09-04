@@ -10,11 +10,12 @@ public class Jun2606 {
 
 	static void dfs(int start) {
 		visited[start] = 1;
-		cnt++;
+
 		for (int i = 1; i <= N; i++) {
-			if (arr[start][i] == 1 && visited[i] == 0)
+			if (arr[start][i] == 1 && visited[i] == 0) {
+				cnt++;
 				dfs(i);
-			
+			}
 		}
 
 	}
