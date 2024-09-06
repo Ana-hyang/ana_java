@@ -2,15 +2,18 @@ import java.io.*;
 import java.util.*;
 
 public class Test {
+	static int[][] oddDirections = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 }, { 1, -1 }, { -1, -1 }, };
+	static int[][] evenDirections = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 }, { -1, 1 }, { 1, 1 } };
 
 	public static void main(String[] args) throws IOException {
-		String str = "HELLO JAVA WORLD!";
 
-		/*
-		 * String[] result = new String[3]; result = str.split(" ");
-		 */
+		for (int[] dir : oddDirections) {
+			System.out.println(dir[0] + " " + dir[1]);
+		}
+		
+		for (int i = 0 ; i<oddDirections.length ; i++) {
+			System.out.println(oddDirections[i][0] + " " + oddDirections[i][1]);
+		}
 
-		// String result[] = str.split(" ");
-		System.out.println(str.split(" ")[1]);
 	}
 }
