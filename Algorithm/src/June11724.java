@@ -40,7 +40,7 @@ public class June11724 {
 				dfs(i);
 			}
 		}
-
+		//출력하기
 		System.out.println(cnt);
 	}
 
