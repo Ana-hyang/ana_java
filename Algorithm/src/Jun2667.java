@@ -16,7 +16,7 @@ public class Jun2667 {
 		for (int i = 0; i < 4; i++) {
 			int ny = y + dy[i];
 			int nx = x + dx[i];
-			if (ny >= 0 && ny < N && nx >= 0 && nx < N && visited[ny][nx] == 0 && arr[ny][nx] == 1) {
+			if (ny >= 0 && ny < N && nx >= 0 && nx < N && arr[ny][nx] == 1 && visited[ny][nx] == 0) {
 				dfs(ny, nx);
 			}
 		}
@@ -24,30 +24,31 @@ public class Jun2667 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		// 입력받기, 지도크기 N
 		N = Integer.parseInt(br.readLine());
 		arr = new int[N][N];
 		visited = new int[N][N];
+		// 입력받기
 		for (int i = 0; i < N; i++) {
 			String str = br.readLine();
 			for (int j = 0; j < N; j++) {
-				arr[i][j] = str.charAt(j) - '0';
+				arr[i][j] = str.charAt(j)-'0';
 			}
 		}
-		// 재귀함수 부르기
-		// 배열에 받아주기
+
+		// 재귀함수 들어가기
 		ArrayList<Integer> al = new ArrayList<>();
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
 				if (arr[i][j] == 1 && visited[i][j] == 0) {
 					cnt = 0;
 					dfs(i, j);
+					// 배열에 받기					
 					al.add(cnt);
 				}
 			}
 		}
 
-		// 오름차순 정렬하기
+		
 		Collections.sort(al);
 		// 출력하기
 		System.out.println(al.size());
@@ -55,5 +56,4 @@ public class Jun2667 {
 			System.out.println(al.get(i));
 		}
 	}
-
 }
